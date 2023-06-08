@@ -9,8 +9,10 @@ const ResetPassword = () => {
   const { id, token } = useParams();
 
   useEffect(()=> {
+    console.log("Id", id);
+    console.log("Token", token);
     axios.get(`https://password-reset-api-b2a7.onrender.com/api/user/reset-password/${id}/${token}`)
-    .then()
+    .then(response => console.log(response))
     .catch(error => console.log(error))
   },[])
 
