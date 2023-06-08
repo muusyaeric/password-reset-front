@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -7,6 +7,12 @@ const ResetPassword = () => {
   const [passwordConfirm, setPasswordConfirm] = useState();
   const [msg, setMsg] = useState("");
   const { id, token } = useParams();
+
+  useEffect(()=> {
+    axios.get(`https://password-reset-api-b2a7.onrender.com/api/user/reset-password/${id}/${token}`)
+    .then()
+    .catch(error => console.log(error))
+  },[])
 
   const handleSubmit = (e) => {
     e.preventDefault();
