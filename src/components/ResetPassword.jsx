@@ -15,7 +15,7 @@ const ResetPassword = () => {
       return;
     }
     axios
-      .post(`http://localhost:5000/api/user/reset-password/${id}/${token}`, {
+      .post(`https://password-reset-api-b2a7.onrender.com/api/user/reset-password/${id}/${token}`, {
         newPassword: newPassword,
         passwordConfirm: passwordConfirm,
       })

@@ -18,7 +18,7 @@ function SignUp() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post(`http://localhost:5000/api/user/register`,{
+    axios.post(`https://password-reset-api-b2a7.onrender.com/api/user/register`,{
         email: details.email,
         password: details.password
     },

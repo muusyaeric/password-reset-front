@@ -17,7 +17,7 @@ function ForgotPass() {
     e.preventDefault();
     console.log(email);
     axios
-      .post(`http://localhost:5000/api/user/forgot-password`, email
+      .post(`https://password-reset-api-b2a7.onrender.com/api/user/forgot-password`, email
       ).then((response) => {
         const data = response.data
         console.log(data)
