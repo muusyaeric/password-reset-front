@@ -8,13 +8,13 @@ const ResetPassword = () => {
   const [msg, setMsg] = useState("");
   const { id, token } = useParams();
 
-  useEffect(()=> {
-    console.log("Id", id);
-    console.log("Token", token);
-    axios.get(`https://password-reset-api-b2a7.onrender.com/api/user/reset-password/${id}/${token}`)
-    .then(response => console.log(response))
-    .catch(error => console.log(error))
-  },[])
+  // useEffect(()=> {
+  //   console.log("Id", id);
+  //   console.log("Token", token);
+  //   axios.get(`https://password-reset-api-b2a7.onrender.com/api/user/reset-password/${id}/${token}`)
+  //   .then(response => console.log(response))
+  //   .catch(error => console.log(error))
+  // },[])
 
   const handleSubmit = (e) => {
     e.preventDefault();
